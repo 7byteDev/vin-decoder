@@ -301,19 +301,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 👁️ Screenshot
 
-![VIN-Decoder UI Screenshot](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI)
+![VIN-Decoder UI Screenshot 1](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+1)
+![VIN-Decoder UI Screenshot 2](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+2)
+![VIN-Decoder UI Screenshot 3](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+3)
 
-*Screenshot of the VIN-Decoder web interface showing the multilingual VIN decoding interface with confidence scores, source attribution, and vehicle technical specifications.*
+*Three screenshots of the VIN-Decoder web interface showing the multilingual VIN decoding interface with confidence scores, source attribution, and vehicle technical specifications (EN/DE/TR languages).*
 
-**To capture your own screenshot:**
-1. Start the application: `docker compose up -d` or follow the local installation instructions
-2. Open your browser at `http://localhost:3000`
-3. Select your preferred language (EN/DE/TR)
-4. Enter a VIN (e.g., `WVWZZZ1KZCW123456`)
-5. Press "Decodieren" / "Decode"
-6. Take a screenshot of the resulting page
-
-Alternatively, you can use the API endpoint `GET /api/v1/decode/{vin}` to test decoding programmatically.
+The screenshots demonstrate the UI functionality including VIN decoding, confidence scores, and multilingual support.
 
 ---
 
