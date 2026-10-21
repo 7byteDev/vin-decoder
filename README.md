@@ -84,13 +84,35 @@ npm --prefix frontend run dev
 
 ## 🗄️ Database External Fill Solution
 
-Since the database size is significant (containing Swiss type approval data, NHTSA WMI data,
-and vehicle images), here's how users can fill the database from outside:
+The full database is **too large for the git repository** (~5.9 GB uncompressed).
+Two ways to get it, recommended order:
 
-### **Solution: Parameterized ETL Import Scripts**
+### **Option 1: Download the ready-made dump (recommended, minutes)**
 
-The project already includes comprehensive ETL (Extract-Transform-Load) scripts that can be
-run from outside the application to populate the database with custom data.
+The complete database ships as a compressed `pg_dump` (custom format) in the
+[v1.0.0 release assets](https://github.com/7byteDev/vin-decoder/releases/download/v1.0.0/):
+
+| Asset | Size | Contents |
+|---|---|---|
+| `vindb.dump.part--0` | 1.5 GB | part 1/3 |
+| `vindb.dump.part--1` | 1.5 GB | part 2/3 |
+| `vindb.dump.part--2` | 186 MB | part 3/3 |
+| `vindb.dump.md5` | 45 B | checksum |
+
+```bash
+# 1. Download all parts, reassemble and verify
+cat vindb.dump.part--* > vindb.dump          # Windows: copy /b ... + ... + ...
+md5sum -c vindb.dump.md5
+
+# 2. Start the database and restore
+docker compose up -d db
+bash scripts/restore_db.sh vindb.dump
+```
+
+### **Option 2: Build the database fresh via ETL (hours)**
+
+Alternatively rebuild from the original public sources with the ETL scripts —
+useful if you want only a subset or cannot download the dump:
 
 ### **How to Use:**
 
