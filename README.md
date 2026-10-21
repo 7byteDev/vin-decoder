@@ -301,13 +301,17 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 👁️ Screenshot
 
-![VIN-Decoder UI Screenshot 1](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+1)
-![VIN-Decoder UI Screenshot 2](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+2)
-![VIN-Decoder UI Screenshot 3](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN-Decoder+UI+3)
+![VIN-Decoder Search Engine](https://via.placeholder.com/800x600/f0f0f0/000000/?text=VIN+Decoder+Search)
+![Brand/Model Overview](https://via.placeholder.com/800x600/f0f0f0/000000/?text=Brand+Model+Overview)
+![Vehicle Details/Specs](https://via.placeholder.com/800x600/f0f0f0/000000/?text=Vehicle+Details+Specs)
 
-*Three screenshots of the VIN-Decoder web interface showing the multilingual VIN decoding interface with confidence scores, source attribution, and vehicle technical specifications (EN/DE/TR languages).*
+*Three key screenshots of the VIN-Decoder web interface:*
 
-The screenshots demonstrate the UI functionality including VIN decoding, confidence scores, and multilingual support.
+1. **VIN Decoder Search** - The main search interface where users enter a VIN to decode
+2. **Brand/Model Overview** - Overview of vehicle brands and models with search results
+3. **Vehicle Details/Specs** - Complete technical specifications including engine, power, dimensions, and features
+
+The screenshots demonstrate the complete workflow from VIN input through to detailed technical data display with multilingual support (EN/DE/TR).
 
 ---
 
