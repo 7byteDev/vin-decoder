@@ -1,0 +1,857 @@
+[
+ {
+  "index": 0,
+  "section": "Datenblatt",
+  "label": "Typengenehmigungsnummer"
+ },
+ {
+  "index": 1,
+  "section": "Datenblatt",
+  "label": "Typengenehmigung erteilt"
+ },
+ {
+  "index": 2,
+  "section": "Datenblatt",
+  "label": "gültig für Importdatum bis"
+ },
+ {
+  "index": 3,
+  "section": "Datenblatt",
+  "label": "Erweiterung TG vom:"
+ },
+ {
+  "index": 4,
+  "section": "Datenblatt",
+  "label": "Erweiterung TG Positionen"
+ },
+ {
+  "index": 5,
+  "section": "Hersteller-Typ",
+  "label": "EFKO-Code"
+ },
+ {
+  "index": 6,
+  "section": "Hersteller-Typ",
+  "label": "01 Fahrzeugart"
+ },
+ {
+  "index": 7,
+  "section": "Hersteller-Typ",
+  "label": "02 Fahrzeugsubart Code"
+ },
+ {
+  "index": 8,
+  "section": "Hersteller-Typ",
+  "label": "02 Fahrzeugsubart"
+ },
+ {
+  "index": 9,
+  "section": "Hersteller-Typ",
+  "label": "03 Fahrzeugklasse"
+ },
+ {
+  "index": 10,
+  "section": "Hersteller-Typ",
+  "label": "04 Marke"
+ },
+ {
+  "index": 11,
+  "section": "Hersteller-Typ",
+  "label": "04 Typ"
+ },
+ {
+  "index": 12,
+  "section": "Hersteller-Typ",
+  "label": "05 Typ; Variante/Version"
+ },
+ {
+  "index": 13,
+  "section": "Hersteller-Typ",
+  "label": "06 Vorziffer"
+ },
+ {
+  "index": 14,
+  "section": "Hersteller-Typ",
+  "label": "07 Karosserieform Code"
+ },
+ {
+  "index": 15,
+  "section": "Hersteller-Typ",
+  "label": "07 Karosserieform"
+ },
+ {
+  "index": 16,
+  "section": "Hersteller-Typ",
+  "label": "08 Geländefahrzeug"
+ },
+ {
+  "index": 17,
+  "section": "Hersteller-Typ",
+  "label": "09 EU-Gesamtgenehmigung"
+ },
+ {
+  "index": 18,
+  "section": "Hersteller-Typ",
+  "label": "10 EFKO-Code"
+ },
+ {
+  "index": 19,
+  "section": "Hersteller-Typ",
+  "label": "10 Hersteller"
+ },
+ {
+  "index": 20,
+  "section": "Hersteller-Typ",
+  "label": "11 Herstellerplakette"
+ },
+ {
+  "index": 21,
+  "section": "Hersteller-Typ",
+  "label": "12 Fahrgestellnummer"
+ },
+ {
+  "index": 22,
+  "section": "Fahrgestell",
+  "label": "14 Achsen/Räder"
+ },
+ {
+  "index": 23,
+  "section": "Fahrgestell",
+  "label": "15 Federung"
+ },
+ {
+  "index": 24,
+  "section": "Fahrgestell",
+  "label": "16 Lenkung"
+ },
+ {
+  "index": 25,
+  "section": "Fahrgestell",
+  "label": "17 Achsantrieb"
+ },
+ {
+  "index": 26,
+  "section": "Fahrgestell",
+  "label": "18 Getriebe 1"
+ },
+ {
+  "index": 27,
+  "section": "Fahrgestell",
+  "label": "18 iA 1"
+ },
+ {
+  "index": 28,
+  "section": "Fahrgestell",
+  "label": "18 Zuordnung 1"
+ },
+ {
+  "index": 29,
+  "section": "Fahrgestell",
+  "label": "18 Getriebe 2"
+ },
+ {
+  "index": 30,
+  "section": "Fahrgestell",
+  "label": "18 iA 2"
+ },
+ {
+  "index": 31,
+  "section": "Fahrgestell",
+  "label": "18 Zuordnung 2"
+ },
+ {
+  "index": 32,
+  "section": "Fahrgestell",
+  "label": "18 Getriebe 3"
+ },
+ {
+  "index": 33,
+  "section": "Fahrgestell",
+  "label": "18 iA 3"
+ },
+ {
+  "index": 34,
+  "section": "Fahrgestell",
+  "label": "18 Zuordnung 3"
+ },
+ {
+  "index": 35,
+  "section": "Fahrgestell",
+  "label": "18 Getriebe 4"
+ },
+ {
+  "index": 36,
+  "section": "Fahrgestell",
+  "label": "18 iA 4"
+ },
+ {
+  "index": 37,
+  "section": "Fahrgestell",
+  "label": "18 Zuordnung 4"
+ },
+ {
+  "index": 38,
+  "section": "Fahrgestell",
+  "label": "19 Fahrzeug Vmax mech von"
+ },
+ {
+  "index": 39,
+  "section": "Fahrgestell",
+  "label": "19 Fahrzeug Vmax mech bis"
+ },
+ {
+  "index": 40,
+  "section": "Fahrgestell",
+  "label": "19 Fahrzeug Vmax autom von"
+ },
+ {
+  "index": 41,
+  "section": "Fahrgestell",
+  "label": "19 Fahrzeug Vmax autom bis"
+ },
+ {
+  "index": 42,
+  "section": "Fahrgestell",
+  "label": "20 Betriebsbremse Z1"
+ },
+ {
+  "index": 43,
+  "section": "Fahrgestell",
+  "label": "20 Betriebsbremse Z2"
+ },
+ {
+  "index": 44,
+  "section": "Fahrgestell",
+  "label": "20 Betriebsbremse Z3"
+ },
+ {
+  "index": 51,
+  "section": "Fahrgestell",
+  "label": "21 Hilfsbremse Z1"
+ },
+ {
+  "index": 52,
+  "section": "Fahrgestell",
+  "label": "21 Hilfsbremse Z2"
+ },
+ {
+  "index": 53,
+  "section": "Fahrgestell",
+  "label": "22 Feststellbremse"
+ },
+ {
+  "index": 57,
+  "section": "Fahrgestell",
+  "label": "23 Dauerbremse"
+ },
+ {
+  "index": 59,
+  "section": "Motor",
+  "label": "25 Motor Marke"
+ },
+ {
+  "index": 60,
+  "section": "Motor",
+  "label": "25 Motor Typ"
+ },
+ {
+  "index": 61,
+  "section": "Motor",
+  "label": "26 Bauart"
+ },
+ {
+  "index": 62,
+  "section": "Motor",
+  "label": "26 Bauart Treibstoff"
+ },
+ {
+  "index": 63,
+  "section": "Motor",
+  "label": "27 Hubraum"
+ },
+ {
+  "index": 64,
+  "section": "Motor",
+  "label": "28 Leistung kW"
+ },
+ {
+  "index": 65,
+  "section": "Motor",
+  "label": "28 Leistung n"
+ },
+ {
+  "index": 66,
+  "section": "Motor",
+  "label": "29 Md. max Nm"
+ },
+ {
+  "index": 67,
+  "section": "Motor",
+  "label": "29 Md. max n"
+ },
+ {
+  "index": 68,
+  "section": "Motor",
+  "label": "30 Abgasreinigung"
+ },
+ {
+  "index": 69,
+  "section": "Motor",
+  "label": "31 Schalldämpfer 1 Art"
+ },
+ {
+  "index": 70,
+  "section": "Motor",
+  "label": "31 Schalldämpfer 1 Bez"
+ },
+ {
+  "index": 71,
+  "section": "Motor",
+  "label": "32 Schalldämpfer 2 Art"
+ },
+ {
+  "index": 72,
+  "section": "Motor",
+  "label": "32 Schalldämpfer 2 Bez"
+ },
+ {
+  "index": 73,
+  "section": "Motor",
+  "label": "33 Schalldämpfer 3 Art"
+ },
+ {
+  "index": 74,
+  "section": "Motor",
+  "label": "33 Schalldämpfer 3 Bez"
+ },
+ {
+  "index": 75,
+  "section": "Motor",
+  "label": "34 Motorkennzeichen"
+ },
+ {
+  "index": 76,
+  "section": "Motor",
+  "label": "34 Motorkennzeichen Anbringungsort"
+ },
+ {
+  "index": 77,
+  "section": "Motor",
+  "label": "35 Geräuschdämpfung Z1"
+ },
+ {
+  "index": 78,
+  "section": "Motor",
+  "label": "35 Geräuschdämpfung Z2"
+ },
+ {
+  "index": 79,
+  "section": "Motor",
+  "label": "35 Geräuschdämpfung Z3"
+ },
+ {
+  "index": 80,
+  "section": "Motor",
+  "label": "35 Geräuschdämpfung Z4"
+ },
+ {
+  "index": 81,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "37 Anzahl Plätze Total von"
+ },
+ {
+  "index": 82,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "37 Anzahl Plätze Total bis"
+ },
+ {
+  "index": 83,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "37 Anzahl Plätze vorne von"
+ },
+ {
+  "index": 84,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "37 Anzahl Plätze vorne bis"
+ },
+ {
+  "index": 85,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "38 Anzahl Türen"
+ },
+ {
+  "index": 87,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "39 Rückspiegel"
+ },
+ {
+  "index": 92,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "40 Länge von"
+ },
+ {
+  "index": 93,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "40 Länge bis"
+ },
+ {
+  "index": 94,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "41 Breite von"
+ },
+ {
+  "index": 95,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "41 Breite bis"
+ },
+ {
+  "index": 96,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "42 Höhe von"
+ },
+ {
+  "index": 97,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "42 Höhe bis"
+ },
+ {
+  "index": 98,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "43 Überhang vorne von"
+ },
+ {
+  "index": 99,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "43 Überhang vorne bis"
+ },
+ {
+  "index": 100,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "43 Überhang hinten von"
+ },
+ {
+  "index": 101,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "43 Überhang hinten bis"
+ },
+ {
+  "index": 102,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "44 Abstand Achse 1-2 von"
+ },
+ {
+  "index": 103,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "44 Abstand Achse 1-2 bis"
+ },
+ {
+  "index": 104,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "45 Abstand Achse 2-3 von"
+ },
+ {
+  "index": 105,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "45 Abstand Achse 2-3 bis"
+ },
+ {
+  "index": 106,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "46 Abstand Achse 3-4 von"
+ },
+ {
+  "index": 107,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "46 Abstand Achse 3-4 bis"
+ },
+ {
+  "index": 108,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "47 Spur Achse 1 von"
+ },
+ {
+  "index": 109,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "47 Spur Achse 1 bis"
+ },
+ {
+  "index": 110,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "47 ET Achse 1 von"
+ },
+ {
+  "index": 111,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "47 ET Achse 1 bis"
+ },
+ {
+  "index": 112,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "48 Spur Achse 2 von"
+ },
+ {
+  "index": 113,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "48 Spur Achse 2 bis"
+ },
+ {
+  "index": 114,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "48 ET Achse 2 von"
+ },
+ {
+  "index": 115,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "48 ET Achse 2 bis"
+ },
+ {
+  "index": 116,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "49 Spur Achse 3 von"
+ },
+ {
+  "index": 117,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "49 Spur Achse 3 bis"
+ },
+ {
+  "index": 118,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "49 ET Achse 3 von"
+ },
+ {
+  "index": 119,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "49 ET Achse 3 bis"
+ },
+ {
+  "index": 120,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "50 Spur Achse 4 von"
+ },
+ {
+  "index": 121,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "50 Spur Achse 4 bis"
+ },
+ {
+  "index": 122,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "50 ET Achse 4 von"
+ },
+ {
+  "index": 123,
+  "section": "Ausrüstung-Abmessungen",
+  "label": "50 ET Achse 4 bis"
+ },
+ {
+  "index": 144,
+  "section": "Gewichte-Garantien",
+  "label": "52 Leergewicht von"
+ },
+ {
+  "index": 145,
+  "section": "Gewichte-Garantien",
+  "label": "52 Leergewicht bis"
+ },
+ {
+  "index": 146,
+  "section": "Gewichte-Garantien",
+  "label": "53 Garantiegewicht von"
+ },
+ {
+  "index": 147,
+  "section": "Gewichte-Garantien",
+  "label": "53 Garantiegewicht bis"
+ },
+ {
+  "index": 148,
+  "section": "Gewichte-Garantien",
+  "label": "54 Achsgarantie v von"
+ },
+ {
+  "index": 149,
+  "section": "Gewichte-Garantien",
+  "label": "54 Achsgarantie v bis"
+ },
+ {
+  "index": 150,
+  "section": "Gewichte-Garantien",
+  "label": "54 Achsgarantie h von"
+ },
+ {
+  "index": 151,
+  "section": "Gewichte-Garantien",
+  "label": "54 Achsgarantie h bis"
+ },
+ {
+  "index": 154,
+  "section": "Gewichte-Garantien",
+  "label": "55 keine Dachlast"
+ },
+ {
+  "index": 155,
+  "section": "Gewichte-Garantien",
+  "label": "55 Dachlast"
+ },
+ {
+  "index": 164,
+  "section": "Anhängelast",
+  "label": "56 keine Anhängelast"
+ },
+ {
+  "index": 165,
+  "section": "Anhängelast",
+  "label": "57 gebremst mech"
+ },
+ {
+  "index": 166,
+  "section": "Anhängelast",
+  "label": "57 gebremst autom"
+ },
+ {
+  "index": 167,
+  "section": "Anhängelast",
+  "label": "58 ungebremst mech"
+ },
+ {
+  "index": 168,
+  "section": "Anhängelast",
+  "label": "58 ungebremst autom"
+ },
+ {
+  "index": 169,
+  "section": "Anhängelast",
+  "label": "59 mit Auflaufbremse mech"
+ },
+ {
+  "index": 170,
+  "section": "Anhängelast",
+  "label": "59 mit Auflaufbremse autom"
+ },
+ {
+  "index": 171,
+  "section": "Anhängelast",
+  "label": "60 Zentralachsanhänger mech"
+ },
+ {
+  "index": 172,
+  "section": "Anhängelast",
+  "label": "60 Zentralachsanhänger autom"
+ },
+ {
+  "index": 173,
+  "section": "Anhängelast",
+  "label": "61 Zentralachsanh. /ABS mech"
+ },
+ {
+  "index": 174,
+  "section": "Anhängelast",
+  "label": "61 Zentralachsanh. /ABS autom"
+ },
+ {
+  "index": 175,
+  "section": "Anhängelast",
+  "label": "62 Drehschemellenkung mech"
+ },
+ {
+  "index": 176,
+  "section": "Anhängelast",
+  "label": "62 Drehschemellenkung autom"
+ },
+ {
+  "index": 177,
+  "section": "Anhängelast",
+  "label": "63 Drehschemellenk./ABS mech"
+ },
+ {
+  "index": 178,
+  "section": "Anhängelast",
+  "label": "63 Drehschemellenk./ABS autom"
+ },
+ {
+  "index": 179,
+  "section": "Anhängelast",
+  "label": "64 Sattelanhänger mech"
+ },
+ {
+  "index": 180,
+  "section": "Anhängelast",
+  "label": "64 Sattelanhänger autom"
+ },
+ {
+  "index": 181,
+  "section": "Anhängelast",
+  "label": "65 Sattelanhänger/ABS mech"
+ },
+ {
+  "index": 182,
+  "section": "Anhängelast",
+  "label": "65 Sattelanhänger/ABS autom"
+ },
+ {
+  "index": 183,
+  "section": "Anhängelast",
+  "label": "66 Gesamtzuggewicht mech"
+ },
+ {
+  "index": 184,
+  "section": "Anhängelast",
+  "label": "66 Gesamtzuggewicht autom"
+ },
+ {
+  "index": 185,
+  "section": "Anhängelast",
+  "label": "67 Stützlast/Faktor Anh.Vorr. mech"
+ },
+ {
+  "index": 186,
+  "section": "Anhängelast",
+  "label": "67 Stützlast/Faktor Anh.Vorr. autom"
+ },
+ {
+  "index": 187,
+  "section": "Anhängelast",
+  "label": "67 Stützlast mech"
+ },
+ {
+  "index": 188,
+  "section": "Anhängelast",
+  "label": "67 Stützlast autom"
+ },
+ {
+  "index": 190,
+  "section": "Reifen und Felgen (Motorfahrzeuge)",
+  "label": "69 Reifen Felgen"
+ },
+ {
+  "index": 191,
+  "section": "Reifen und Felgen (Motorfahrzeuge)",
+  "label": "70 Reifen Felgen"
+ },
+ {
+  "index": 192,
+  "section": "Reifen und Felgen (Motorfahrzeuge)",
+  "label": "71 Reifen Felgen"
+ },
+ {
+  "index": 199,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z1"
+ },
+ {
+  "index": 200,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z2"
+ },
+ {
+  "index": 201,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z3"
+ },
+ {
+  "index": 202,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z4"
+ },
+ {
+  "index": 203,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z5"
+ },
+ {
+  "index": 204,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z6"
+ },
+ {
+  "index": 205,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z7"
+ },
+ {
+  "index": 206,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z8"
+ },
+ {
+  "index": 207,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z9"
+ },
+ {
+  "index": 208,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z10"
+ },
+ {
+  "index": 209,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z11"
+ },
+ {
+  "index": 210,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z12"
+ },
+ {
+  "index": 211,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z13"
+ },
+ {
+  "index": 212,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z14"
+ },
+ {
+  "index": 213,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z15"
+ },
+ {
+  "index": 214,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z16"
+ },
+ {
+  "index": 215,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z17"
+ },
+ {
+  "index": 216,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z18"
+ },
+ {
+  "index": 217,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z19"
+ },
+ {
+  "index": 218,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z20"
+ },
+ {
+  "index": 219,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z21"
+ },
+ {
+  "index": 220,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z22"
+ },
+ {
+  "index": 221,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z23"
+ },
+ {
+  "index": 222,
+  "section": "Bemerkungen, beh. Auflagen",
+  "label": "Bemerkungen Z24"
+ }
+]

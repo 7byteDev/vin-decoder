@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "title": "VIN-Decoder",
+    "description": "Technische VIN-Decodierung mit Konfidenz und Quellenangabe pro Feld. Schwerpunkt: europäische und türkische Fahrzeuge."
+  },
+  "nav": {
+    "brands": "Marken",
+    "home": "Startseite",
+    "language": "Sprache",
+    "menu": "Hauptnavigation",
+    "results": "Ergebnisse",
+    "sources": "Quellen",
+    "typeApproval": "Typgenehmigung",
+    "vehicle": "Fahrzeug",
+    "whatIsVin": "Was ist eine FIN?"
+  },
+  "form": {
+    "label": "Fahrzeug-Identifizierungsnummer",
+    "placeholder": "z. B. WVWZZZ1JZ3W386752",
+    "submit": "Decodieren",
+    "loading": "Wird decodiert …",
+    "hint": "17 Zeichen. Die Buchstaben I, O und Q kommen in einer VIN nie vor.",
+    "example": "Beispiel ausprobieren",
+    "clear": "Leeren"
+  },
+  "result": {
+    "title": "Ergebnis",
+    "confidence": "Gesamtkonfidenz",
+    "status": {
+      "ok": "Vollständig",
+      "partial": "Teilweise"
+    },
+    "field": "Feld",
+    "value": "Wert",
+    "sourcesColumn": "Quelle",
+    "confidenceColumn": "Konfidenz",
+    "noData": "Keine Angabe",
+    "conflict": "Quellen widersprechen sich",
+    "alternatives": "Ebenfalls gemeldet",
+    "showDetails": "Details anzeigen",
+    "hideDetails": "Details ausblenden",
+    "durationMs": "Aufgelöst in {ms} ms",
+    "empty": "VIN eingeben, um die technische Aufschlüsselung zu sehen."
+  },
+  "structure": {
+    "title": "Aufbau (ISO 3779)",
+    "explain": "Die ersten drei Zeichen kennzeichnen den Hersteller, die Zeichen 4–9 beschreiben das Fahrzeug, 10–17 identifizieren das einzelne Exemplar. Nur der herstellerspezifische Mittelteil ist nicht genormt — genau deshalb braucht ein Decoder mehrere Datenquellen.",
+    "wmi": "Herstellerkennung (WMI)",
+    "vds": "Fahrzeugbeschreibung (VDS)",
+    "vis": "Fahrzeugkennung (VIS)",
+    "extendedWmi": "Erweiterte Herstellerkennung",
+    "smallManufacturer": "Kleinserienhersteller (weniger als 1000 Fahrzeuge pro Jahr)",
+    "country": "Land der Herstellerkennung",
+    "region": "Region",
+    "checkDigit": "Prüfziffer",
+    "checkDigitValid": "stimmt",
+    "checkDigitInvalid": "stimmt nicht",
+    "checkDigitNotRequired": "in dieser Region nicht verbindlich",
+    "modelYearCode": "Modelljahr-Code",
+    "modelYearCandidates": "Mögliche Jahre",
+    "plantCode": "Werkscode",
+    "serialMasked": "Seriennummer (wird nicht verarbeitet)"
+  },
+  "attributes": {
+    "body_class": "Karosserie",
+    "country": "Land",
+    "country_code": "Ländercode",
+    "doors": "Türen",
+    "drive_type": "Antriebsart",
+    "engine_cylinders": "Zylinder",
+    "engine_displacement_l": "Hubraum (l)",
+    "engine_model": "Motorcode",
+    "engine_power_kw": "Leistung (kW)",
+    "fuel_type": "Kraftstoff",
+    "height": "Höhe",
+    "length": "Länge",
+    "make": "Marke",
+    "manufacturer": "Hersteller",
+    "max_weight": "Gesamtgewicht",
+    "model": "Modell",
+    "model_year": "Modelljahr",
+    "plant_city": "Werk (Ort)",
+    "plant_code": "Werkscode",
+    "plant_company": "Werksbetreiber",
+    "plant_country": "Werk (Land)",
+    "region": "Region",
+    "seats": "Sitzplätze",
+    "series": "Baureihe",
+    "top_speed": "Höchstgeschwindigkeit",
+    "torque": "Drehmoment",
+    "transmission": "Getriebe",
+    "trim": "Ausstattung",
+    "vehicle_class": "EU-Klasse",
+    "vehicle_type": "Fahrzeugart",
+    "weight": "Leergewicht",
+    "wheelbase": "Radstand",
+    "width": "Breite"
+  },
+  "warnings": {
+    "title": "Hinweise",
+    "check_digit_mismatch": "Die Prüfziffer stimmt nicht. In dieser Region ist sie verbindlich — die VIN enthält womöglich einen Tippfehler.",
+    "check_digit_not_applicable": "Die Prüfziffer stimmt nicht, was bei europäischen VINs normal ist: Position 9 ist dort häufig ein Füllzeichen.",
+    "model_year_ambiguous": "Der Modelljahr-Code wiederholt sich alle 30 Jahre. Mehrere Jahre sind möglich.",
+    "model_year_code_invalid": "Position 10 enthält keinen gültigen Modelljahr-Code.",
+    "model_year_out_of_range": "Der Modelljahr-Code ergibt kein plausibles Jahr.",
+    "model_year_position7_rule_inconclusive": "Die nordamerikanische Regel zu Position 7 hat das Jahr nicht aufgelöst.",
+    "country_range_unassigned": "Der Länderbereich dieser Herstellerkennung ist in ISO 3780 nicht vergeben.",
+    "manufacturer_unknown": "Zu dieser Kennung wurde kein Hersteller gefunden. Die Datenbank deckt sie noch nicht ab.",
+    "live_lookup_used": "Wegen Lücken in der eigenen Datenbank wurde eine freie externe API abgefragt."
+  },
+  "errors": {
+    "title": "Decodierung nicht möglich",
+    "vin_empty": "Bitte eine VIN eingeben.",
+    "vin_length": "Eine VIN hat genau 17 Zeichen.",
+    "vin_invalid_characters": "Die VIN enthält unzulässige Zeichen: {characters}.",
+    "rate_limited": "Zu viele Anfragen. Bitte einen Moment warten.",
+    "network": "Der Dienst ist gerade nicht erreichbar.",
+    "suggestion": "Meinten Sie {suggestion}?"
+  },
+  "sources": {
+    "title": "Quellen",
+    "structural": "Strukturelle Decodierung (ISO 3779/3780)",
+    "vindb": "Eigene Datenbank",
+    "nhtsa_vpic": "NHTSA vPIC (gemeinfrei)",
+    "vininfo": "vininfo (BSD-3-Clause)",
+    "note": "Jeder Wert nennt seine Herkunft. Widersprechen sich Quellen, wird der Widerspruch angezeigt statt stillschweigend aufgelöst."
+  },
+  "privacy": {
+    "title": "Nur technische Daten",
+    "body": "Dieses Werkzeug verarbeitet ausschließlich technische Fahrzeugdaten — Hersteller, Modell, Baujahr, Technik. Es werden keine Halter-, Zulassungs- oder sonstigen personenbezogenen Daten abgefragt, gespeichert oder angezeigt. Der Seriennummernteil der VIN wird maskiert, bevor überhaupt etwas protokolliert wird."
+  },
+  "footer": {
+    "madeFor": "Technischer VIN-Decoder mit Schwerpunkt Europa und Türkei.",
+    "api": "API-Dokumentation"
+  },
+  "list": {
+    "title": "Passende Fahrzeuge",
+    "count": "{count} übereinstimmende Fahrzeuge",
+    "none": "Zu dieser VIN passt noch keine Typengenehmigung.",
+    "noneHint": "Die strukturelle Decodierung unten gilt weiterhin. Die Abdeckung ist bei in Europa zugelassenen Fahrzeugen am besten.",
+    "model": "Modell",
+    "year": "Jahr",
+    "power": "Leistung",
+    "fuel": "Kraftstoff",
+    "transmission": "Getriebe",
+    "select": "Auswählen",
+    "back": "Zurück zur Suche",
+    "quality": "Trefferqualität",
+    "matchedOn": "Getroffen über",
+    "hint": "Eine VIN unterscheidet die Motorisierungen einer Baureihe nicht. Wählen Sie das Fahrzeug, das zu Ihrem passt."
+  },
+  "detail": {
+    "approvalDate": "Genehmigt am",
+    "approvalNumber": "Schweizer Typengenehmigung",
+    "back": "Zurück zu den Ergebnissen",
+    "basePattern": "Basis-VIN-Muster",
+    "close": "Schließen",
+    "consumption": "Verbrauch & CO₂",
+    "dimensions": "Abmessungen & Gewichte",
+    "efficiency": "Effizienzkategorie",
+    "emissionCode": "Emissionscode",
+    "emissions": "Emissionen",
+    "engine": "Motor",
+    "enlarge": "Vergrößern",
+    "euApproval": "EU-Typgenehmigung",
+    "exhaustCode": "Abgascode",
+    "general": "Allgemein",
+    "imageNote": "Die Fotos zeigen die Baureihe, nicht die genaue Ausführung dieser Genehmigung. Frei lizenziert über Wikimedia Commons.",
+    "nedc": "NEFZ",
+    "next": "Nächstes Bild",
+    "noExtras": "Zu dieser Genehmigung sind keine Verbrauchs- oder Emissionswerte hinterlegt.",
+    "notFound": "Diesen Fahrzeugdatensatz gibt es nicht.",
+    "pollutants": "Schadstoffe",
+    "previous": "Vorheriges Bild",
+    "productionYear": "Produktionsjahr",
+    "range": "Elektrische Reichweite",
+    "searchedVin": "Gesuchte VIN",
+    "source": "Quelle",
+    "technical": "Technische Daten",
+    "variant": "Ausführung",
+    "wheelbaseUncertain": "nicht eindeutig – Genehmigung deckt beide Ausführungen ab",
+    "wltp": "WLTP"
+  },
+  "sections": {
+    "datenblatt": "Datenblatt",
+    "hersteller_typ": "Hersteller & Typ",
+    "fahrgestell": "Fahrgestell",
+    "motor": "Motor",
+    "abmessungen": "Ausstattung & Abmessungen",
+    "gewichte": "Gewichte & Garantien",
+    "anhaengelast": "Anhängelasten",
+    "reifen": "Reifen & Felgen",
+    "bemerkungen": "Bemerkungen & Auflagen",
+    "sonstiges": "Sonstiges"
+  },
+  "values": {
+    "fuel": {
+      "petrol": "Benzin",
+      "petrol_direct_injection": "Benzin (Direkteinspritzung)",
+      "diesel": "Diesel",
+      "electric": "Elektro",
+      "hybrid": "Hybrid",
+      "gas": "Gas",
+      "hydrogen": "Wasserstoff"
+    },
+    "transmission": {
+      "manual": "Schaltgetriebe",
+      "automatic": "Automatik",
+      "continuous": "Stufenlos",
+      "electric": "Eingang"
+    },
+    "drive": {
+      "front_wheel": "Vorderradantrieb",
+      "rear_wheel": "Hinterradantrieb",
+      "all_wheel": "Allradantrieb"
+    }
+  },
+  "units": {
+    "kw": "kW",
+    "ps": "PS",
+    "ccm": "cm³",
+    "mm": "mm",
+    "kg": "kg",
+    "kmh": "km/h",
+    "nm": "Nm",
+    "rpm": "U/min",
+    "gears": "{count} Gänge"
+  },
+  "home": {
+    "hero": {
+      "title": "Kostenlose VIN-Prüfung mit amtlichen Typengenehmigungsdaten",
+      "subtitle": "Fahrgestellnummer eingeben und den technischen Datensatz dahinter sehen: Motor, Leistung, Getriebe, Abmessungen und Emissionen — mit Quellenangabe und Konfidenzwert für jedes Feld.",
+      "badgeOfficial": "Amtliche Behördendaten",
+      "badgeUpdated": "Wöchentlich aktualisiert",
+      "badgePrivacy": "Keine personenbezogenen Daten"
+    },
+    "recent": {
+      "title": "Aktuelle Fahrzeugsuchen",
+      "empty": "Noch keine Suchen.",
+      "note": "Gespeichert wird nur der technische Teil der VIN (Position 1–11). Die Seriennummer wird maskiert, bevor überhaupt etwas protokolliert wird."
+    },
+    "vin": {
+      "title": "Was ist eine Fahrzeug-Identifizierungsnummer (FIN)?",
+      "body1": "Die FIN ist der eindeutige Code, den ein Hersteller einem Fahrzeug bei der Produktion zuweist. Sie hat genau 17 Zeichen. Die Buchstaben I, O und Q kommen nie vor — sie sind zu leicht mit den Ziffern 1 und 0 zu verwechseln.",
+      "body2": "Genormt ist die FIN durch ISO 3779 und ISO 3780 — allerdings nur ihr Aufbau. Was die Zeichen im Mittelteil bedeuten, legt jeder Hersteller für sich fest. Genau deshalb braucht eine Decodierung mehr als eine Datenquelle.",
+      "whereTitle": "Wo sie zu finden ist",
+      "where": "Fahrerseitig auf dem Armaturenbrett, durch die Windschutzscheibe lesbar; in der Zulassungsbescheinigung; und ins Fahrgestell eingeprägt — die Typengenehmigung nennt sogar die genaue Stelle je Modell."
+    },
+    "anatomy": {
+      "title": "Wie eine FIN aufgebaut ist",
+      "positions": "Position {range}",
+      "wmi": "Herstellerkennung (WMI)",
+      "wmiText": "Hersteller und Produktionsland.",
+      "vds": "Fahrzeugbeschreibung (VDS)",
+      "vdsText": "Modell, Karosserie und Motor — herstellerspezifisch, nicht genormt.",
+      "check": "Prüfziffer",
+      "checkText": "In Nordamerika und China verbindlich, in Europa meist ein Füllzeichen.",
+      "year": "Modelljahr-Code",
+      "yearText": "Wiederholt sich alle 30 Jahre und ist deshalb für sich genommen nie eindeutig.",
+      "plant": "Werkscode",
+      "plantText": "Das Montagewerk, vom Hersteller festgelegt.",
+      "serial": "Seriennummer",
+      "serialText": "Bezeichnet das einzelne Fahrzeug. Dieses Werkzeug speichert sie nie."
+    },
+    "legacy": {
+      "title": "Vor 1981 war die FIN nicht genormt",
+      "body": "Jeder Hersteller nutzte sein eigenes Format, Länge und Aufbau schwankten stark. Erst seit 1981 ist das 17-stellige Format vorgeschrieben. Bei älteren Fahrzeugen muss der Hersteller bekannt sein — die strukturellen Regeln unten greifen dort nicht."
+    },
+    "yearTable": {
+      "title": "Modelljahr-Codes (Position 10)",
+      "body": "Das zehnte Zeichen verschlüsselt das Modelljahr in einem 30-Jahres-Zyklus. Diese Tabelle stammt aus derselben Quelle, die auch der Decoder verwendet — sie kann also gar nicht von dem abweichen, was tatsächlich herauskommt.",
+      "code": "Code",
+      "cycle1": "1. Zyklus",
+      "cycle2": "2. Zyklus"
+    },
+    "countryTable": {
+      "title": "Länderbereiche der Herstellerkennung",
+      "body": "Die ersten beiden Zeichen bestimmen nach ISO 3780 das Produktionsland. Hier stehen die Bereiche, die unser Decoder tatsächlich auswertet.",
+      "range": "Bereich",
+      "country": "Land",
+      "region": "Region",
+      "showAll": "Alle {count} Bereiche anzeigen",
+      "showLess": "Weniger anzeigen"
+    },
+    "facts": {
+      "lengthTitle": "Wie viele Zeichen?",
+      "length": "Genau 17 — Ziffern und Großbuchstaben",
+      "lettersTitle": "Welche Buchstaben fehlen?",
+      "letters": "I, O und Q, wegen der Verwechslung mit 1 und 0",
+      "sourceTitle": "Woher kommen die Technikdaten?",
+      "source": "Schweizer Typengenehmigungen (ASTRA TARGA), veröffentlicht als Open Government Data"
+    },
+    "eu": {
+      "title": "Was ist eine EU-Typgenehmigung?",
+      "body": "Die Typgenehmigung ist das Verfahren, mit dem bestätigt wird, dass ein Fahrzeugtyp die europäischen Sicherheits-, Umwelt- und Technikanforderungen erfüllt, bevor er verkauft werden darf. Die Behörde prüft ein Muster; der Hersteller bestätigt anschließend, dass jedes gebaute Exemplar diesem genehmigten Typ entspricht — Einzelprüfungen entfallen dadurch.",
+      "findTitle": "Wo die Genehmigungsnummer steht",
+      "find1": "Auf dem Herstellerschild — meist im Motorraum, an einer Türsäule oder unter der Haube.",
+      "find2": "In der Zulassungsbescheinigung, in den meisten EU-Ländern.",
+      "find3": "In der Übereinstimmungsbescheinigung (COC) des Herstellers.",
+      "numberTitle": "Die Nummer lesen",
+      "part1": "Land, das die Genehmigung erteilt hat (e1 = Deutschland, e2 = Frankreich)",
+      "part2": "Basisrichtlinie oder -verordnung (2007/46 = Rahmenrichtlinie)",
+      "part3": "Fortlaufende Nummer der Basisgenehmigung",
+      "part4": "Nummer der Erweiterung",
+      "whyTitle": "Warum das zählt",
+      "why1": "Ein Fahrzeug mit EU-Typgenehmigung kann in jedem Mitgliedstaat ohne weitere technische Prüfung zugelassen werden.",
+      "why2": "Sie belegt, dass Sicherheits- und Emissionsstandards erfüllt waren, bevor das Fahrzeug auf die Straße kam.",
+      "why3": "Erst der Genehmigungsdatensatz macht es überhaupt möglich, aus einer Fahrgestellnummer Motor-, Getriebe- und Emissionsdaten nachzuschlagen."
+    }
+  },
+  "browse": {
+    "approvals": "Typengenehmigungen",
+    "empty": "Keine Einträge gefunden.",
+    "fuel": "Kraftstoff",
+    "generation": "Baureihe",
+    "generations": "Baureihen",
+    "intro": "Alle Marken des Typengenehmigungsbestands. Wählen Sie eine Marke, um Modelle, Baureihen und die einzelnen Fahrzeuge zu sehen.",
+    "models": "Modelle",
+    "open": "Ansehen",
+    "power": "Leistung",
+    "sameData": "technisch identisch",
+    "sort": "Sortieren nach",
+    "sortCountAsc": "Nach Bestand (aufsteigend)",
+    "sortCountDesc": "Nach Bestand (absteigend)",
+    "sortNameAsc": "Alphabetisch (A-Z)",
+    "sortNameDesc": "Alphabetisch (Z-A)",
+    "title": "Fahrzeuge nach Marke",
+    "transmission": "Getriebe",
+    "vehicle": "Fahrzeug",
+    "vehicles": "Fahrzeuge",
+    "years": "Baujahr"
+  }
+}

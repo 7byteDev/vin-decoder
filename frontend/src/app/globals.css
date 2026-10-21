@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Farbsystem
+ *
+ * Leitfarbe ist ein tiefes Blau - es liest sich technisch und ruhig und
+ * traegt die vielen Zahlen auf den Detailseiten, ohne sie zu ueberlagern.
+ * Bernstein setzt Akzente (Hinweise, Mehrdeutigkeit), Teal steht fuer
+ * belastbare Daten, Rot fuer Fehler.
+ *
+ * Alle Farben sind als Token definiert; der Dunkelmodus tauscht nur die
+ * Werte, nie die Bedeutung.
+ */
+:root {
+  color-scheme: light;
+
+  --bg: #f6f7f9;
+  --bg-alt: #eef1f5;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #dfe4ea;
+  --border-strong: #c6ced9;
+
+  --text: #14202e;
+  --text-soft: #3d4b5c;
+  --muted: #6b7789;
+
+  --primary: #1b4b8f;
+  --primary-hover: #16407a;
+  --primary-soft: #e8eefa;
+  --primary-border: #c2d3ee;
+  --on-primary: #ffffff;
+
+  --accent: #b45309;
+  --accent-soft: #fdf3e3;
+
+  --good: #0f766e;
+  --good-soft: #e3f4f1;
+
+  --danger: #b3261e;
+  --danger-soft: #fbeae9;
+
+  --hero-from: #12325e;
+  --hero-via: #1b4b8f;
+  --hero-to: #2b6cb8;
+
+  --shadow-sm: 0 1px 2px rgba(16, 32, 52, 0.06);
+  --shadow-md: 0 4px 16px rgba(16, 32, 52, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 32, 52, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #0e1319;
+    --bg-alt: #131a22;
+    --surface: #171f28;
+    --surface-2: #1d2731;
+    --border: #2a3542;
+    --border-strong: #3a4756;
+
+    --text: #e8edf3;
+    --text-soft: #c2ccd8;
+    --muted: #8b98a8;
+
+    --primary: #6ba3e8;
+    --primary-hover: #86b5ee;
+    --primary-soft: #17273c;
+    --primary-border: #2d4763;
+    --on-primary: #0b1420;
+
+    --accent: #e0a04a;
+    --accent-soft: #2c2416;
+
+    --good: #4bbfae;
+    --good-soft: #122b28;
+
+    --danger: #e08b83;
+    --danger-soft: #2c1917;
+
+    --hero-from: #0d1b2c;
+    --hero-via: #14304f;
+    --hero-to: #1b4b8f;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabellen auf schmalen Geräten scrollbar halten, statt das Layout zu sprengen */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Sichtbarer Fokus für Tastaturbedienung */
+:where(a, button, input, select, summary):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Zebra-Streifen für lange Datentabellen */
+.zebra tbody tr:nth-child(even) {
+  background: var(--surface-2);
+}

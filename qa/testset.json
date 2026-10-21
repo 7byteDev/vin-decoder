@@ -1,0 +1,906 @@
+{
+  "meta": {
+    "purpose": "Genauigkeitsmessung des VIN-Decoders (Projektplan Phase 0 und 4)",
+    "privacy": "Nur technische Muster. Die Seriennummern sind Platzhalter, es sind keine realen Einzelfahrzeuge referenziert.",
+    "verification_levels": {
+      "vpic": "Hersteller/Marke ueber die WMI in NHTSA vPIC bestaetigt",
+      "structural": "aus ISO 3779/3780 hergeleitet",
+      "open": "Fachwissen, in Phase 4 manuell zu bestaetigen"
+    },
+    "case_count": 30,
+    "vpic_without_model": 21
+  },
+  "cases": [
+    {
+      "vin": "WVWZZZ1JZ3W386752",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2003,
+        "make": "Volkswagen",
+        "model": "Golf IV"
+      },
+      "verified": "vpic",
+      "notes": "Plattform 1J",
+      "structural": {
+        "wmi": "WVW",
+        "country": "Germany",
+        "model_year_candidates": [
+          2003
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "VOLKSWAGEN",
+        "Model": null,
+        "ModelYear": "2003",
+        "Manufacturer": "VOLKSWAGEN AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,5,14,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "WVWZZZ3CZFE123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2015,
+        "make": "Volkswagen",
+        "model": "Passat"
+      },
+      "verified": "vpic",
+      "notes": "Plattform 3C",
+      "structural": {
+        "wmi": "WVW",
+        "country": "Germany",
+        "model_year_candidates": [
+          1985,
+          2015
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "VOLKSWAGEN",
+        "Model": null,
+        "ModelYear": "1985",
+        "Manufacturer": "VOLKSWAGEN AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,5,14,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "WAUZZZ8K9BA123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2011,
+        "make": "Audi",
+        "model": "A4"
+      },
+      "verified": "vpic",
+      "notes": "Plattform 8K",
+      "structural": {
+        "wmi": "WAU",
+        "country": "Germany",
+        "model_year_candidates": [
+          1981,
+          2011
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "AUDI",
+        "Model": null,
+        "ModelYear": "1981",
+        "Manufacturer": "AUDI AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,5,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "WBA3B1C50EK123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2014,
+        "make": "BMW",
+        "model": "3er"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "WBA",
+        "country": "Germany",
+        "model_year_candidates": [
+          1984,
+          2014
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "BMW",
+        "Model": "320i",
+        "ModelYear": "2014",
+        "Manufacturer": "BMW AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "WDB2110563A123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2003,
+        "make": "Mercedes-Benz",
+        "model": "E-Klasse"
+      },
+      "verified": "vpic",
+      "notes": "Baureihe W211",
+      "structural": {
+        "wmi": "WDB",
+        "country": "Germany",
+        "model_year_candidates": [
+          2003
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": "2003",
+        "Manufacturer": "MERCEDES-BENZ CARS",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,5,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "W0LPD6EL5B1123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2011,
+        "make": "Opel",
+        "model": "Astra J"
+      },
+      "verified": "open",
+      "notes": "vininfo-Regeln: Modellcode P an Position 4",
+      "structural": {
+        "wmi": "W0L",
+        "country": "Germany",
+        "model_year_candidates": [
+          1981,
+          2011
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "OPEL",
+        "Model": null,
+        "ModelYear": "2011",
+        "Manufacturer": "ADAM OPEL AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "WP0ZZZ99ZAS123456",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2010,
+        "make": "Porsche",
+        "model": "911"
+      },
+      "verified": "open",
+      "notes": "",
+      "structural": {
+        "wmi": "WP0",
+        "country": "Germany",
+        "model_year_candidates": [
+          1980,
+          2010
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "PORSCHE",
+        "Model": null,
+        "ModelYear": "2010",
+        "Manufacturer": "DR. ING. H.C.F. PORSCHE AG",
+        "PlantCountry": "GERMANY",
+        "ErrorCode": "1,5,14,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "WMWZC3C50EWP12345",
+      "expect": {
+        "country_code": "DE",
+        "model_year": 2014,
+        "make": "MINI",
+        "model": null
+      },
+      "verified": "open",
+      "notes": "Fertigung Oxford, WMI Deutschland",
+      "structural": {
+        "wmi": "WMW",
+        "country": "Germany",
+        "model_year_candidates": [
+          1984,
+          2014
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "MINI",
+        "Model": "Countryman",
+        "ModelYear": "2014",
+        "Manufacturer": "BMW AG",
+        "PlantCountry": "AUSTRIA",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "VF1LM1B0H36123456",
+      "expect": {
+        "country_code": "FR",
+        "model_year": 2003,
+        "make": "Renault",
+        "model": null
+      },
+      "verified": "vpic",
+      "notes": "vininfo liefert Karosserie/Getriebe-Regeln",
+      "structural": {
+        "wmi": "VF1",
+        "country": "France",
+        "model_year_candidates": [
+          2003
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": "2003",
+        "Manufacturer": "RENAULT GROUP",
+        "PlantCountry": null,
+        "ErrorCode": "1,8,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "VF3LCBHZBHS123456",
+      "expect": {
+        "country_code": "FR",
+        "model_year": 2017,
+        "make": "Peugeot",
+        "model": null
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "VF3",
+        "country": "France",
+        "model_year_candidates": [
+          1987,
+          2017
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "PEUGEOT",
+        "Model": null,
+        "ModelYear": "1987",
+        "Manufacturer": "AUTOMOBILES PEUGEOT",
+        "PlantCountry": "FRANCE",
+        "ErrorCode": "1,5,14,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "VF7DD5FS8CJ123456",
+      "expect": {
+        "country_code": "FR",
+        "model_year": 2012,
+        "make": "Citroen",
+        "model": null
+      },
+      "verified": "open",
+      "notes": "LUECKE: VF7 ist in vPIC nicht hinterlegt",
+      "structural": {
+        "wmi": "VF7",
+        "country": "France",
+        "model_year_candidates": [
+          1982,
+          2012
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "1,7"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "VNKKTUD35FA123456",
+      "expect": {
+        "country_code": "FR",
+        "model_year": 2015,
+        "make": "Toyota",
+        "model": "Yaris"
+      },
+      "verified": "vpic",
+      "notes": "Toyota Valenciennes",
+      "structural": {
+        "wmi": "VNK",
+        "country": "France",
+        "model_year_candidates": [
+          1985,
+          2015
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "TOYOTA",
+        "Model": "Yaris",
+        "ModelYear": "2015",
+        "Manufacturer": "TOYOTA MOTOR MANUFACTURING, FRANCE, S.A.S.",
+        "PlantCountry": "FRANCE",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "ZFA312000E1123456",
+      "expect": {
+        "country_code": "IT",
+        "model_year": 2014,
+        "make": "Fiat",
+        "model": null
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "ZFA",
+        "country": "Italy",
+        "model_year_candidates": [
+          1984,
+          2014
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "FIAT",
+        "Model": null,
+        "ModelYear": "1984",
+        "Manufacturer": "FCA ITALY S.P.A.",
+        "PlantCountry": null,
+        "ErrorCode": "8"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "ZAR939000E7123456",
+      "expect": {
+        "country_code": "IT",
+        "model_year": 2014,
+        "make": "Alfa Romeo",
+        "model": null
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "ZAR",
+        "country": "Italy",
+        "model_year_candidates": [
+          1984,
+          2014
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "ALFA ROMEO",
+        "Model": null,
+        "ModelYear": "1984",
+        "Manufacturer": "ALFA ROMEO S.P.A.",
+        "PlantCountry": null,
+        "ErrorCode": "1,8"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "VSSZZZ6JZ8R123456",
+      "expect": {
+        "country_code": "ES",
+        "model_year": 2008,
+        "make": "SEAT",
+        "model": "Ibiza"
+      },
+      "verified": "open",
+      "notes": "LUECKE: VSS ist in vPIC nicht hinterlegt",
+      "structural": {
+        "wmi": "VSS",
+        "country": "Spain",
+        "model_year_candidates": [
+          2008
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "1,7,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "TMBJB41Z4B2123456",
+      "expect": {
+        "country_code": "CZ",
+        "model_year": 2011,
+        "make": "Skoda",
+        "model": "Octavia"
+      },
+      "verified": "open",
+      "notes": "LUECKE: TMB ist in vPIC nicht hinterlegt",
+      "structural": {
+        "wmi": "TMB",
+        "country": "Czech Republic",
+        "model_year_candidates": [
+          1981,
+          2011
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "1,7"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "TMAD381AAFJ123456",
+      "expect": {
+        "country_code": "CZ",
+        "model_year": 2015,
+        "make": "Hyundai",
+        "model": "i30"
+      },
+      "verified": "open",
+      "notes": "LUECKE: TMA (Hyundai Nosovice) ist in vPIC nicht hinterlegt",
+      "structural": {
+        "wmi": "TMA",
+        "country": "Czech Republic",
+        "model_year_candidates": [
+          1985,
+          2015
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "1,7,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "U5YFF241ADL123456",
+      "expect": {
+        "country_code": "SK",
+        "model_year": 2013,
+        "make": "Kia",
+        "model": "Ceed"
+      },
+      "verified": "open",
+      "notes": "Konfliktfall: Land strukturell SK, vPIC ordnet U5Y einem US-Standort zu",
+      "structural": {
+        "wmi": "U5Y",
+        "country": "Slovakia",
+        "model_year_candidates": [
+          1983,
+          2013
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": "2013",
+        "Manufacturer": "HYUNDAI-KIA AMERICA TECHNICAL CENTER INC (HATCI)",
+        "PlantCountry": null,
+        "ErrorCode": "1,8,400"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "YV1MS672382123456",
+      "expect": {
+        "country_code": "SE",
+        "model_year": 2008,
+        "make": "Volvo",
+        "model": "S40"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "YV1",
+        "country": "Sweden",
+        "model_year_candidates": [
+          2008
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "VOLVO",
+        "Model": "S40",
+        "ModelYear": "2008",
+        "Manufacturer": "VOLVO CAR CORPORATION",
+        "PlantCountry": "BELGIUM",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "YS3DD78N4X7055320",
+      "expect": {
+        "country_code": "SE",
+        "model_year": 1999,
+        "make": "Saab",
+        "model": "9-3"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "YS3",
+        "country": "Sweden",
+        "model_year_candidates": [
+          1999
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "SAAB",
+        "Model": "9-3",
+        "ModelYear": "1999",
+        "Manufacturer": "SAAB CARS NORTH AMERICA, INC.",
+        "PlantCountry": "FINLAND",
+        "ErrorCode": "0"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "SALLDHMP7VA123456",
+      "expect": {
+        "country_code": "GB",
+        "model_year": null,
+        "make": "Land Rover",
+        "model": "Discovery"
+      },
+      "verified": "vpic",
+      "notes": "Jahrescode V ist mehrdeutig (1997/2027) - Testfall fuer Mehrdeutigkeit",
+      "structural": {
+        "wmi": "SAL",
+        "country": "United Kingdom",
+        "model_year_candidates": [
+          1997,
+          2027
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "LAND ROVER",
+        "Model": null,
+        "ModelYear": "2027",
+        "Manufacturer": "JAGUAR LAND ROVER LIMITED",
+        "PlantCountry": "UNITED KINGDOM (UK)",
+        "ErrorCode": "5,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "SJNFAAJ11D1234567",
+      "expect": {
+        "country_code": "GB",
+        "model_year": 2013,
+        "make": "Nissan",
+        "model": "Qashqai"
+      },
+      "verified": "open",
+      "notes": "LUECKE: SJN (Nissan Sunderland) ist in vPIC nicht hinterlegt",
+      "structural": {
+        "wmi": "SJN",
+        "country": "United Kingdom",
+        "model_year_candidates": [
+          1983,
+          2013
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "1,7"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "NM0LS7E28E1234567",
+      "expect": {
+        "country_code": "TR",
+        "model_year": 2014,
+        "make": "Ford",
+        "model": "Transit Connect"
+      },
+      "verified": "vpic",
+      "notes": "Ford Otosan, Golcuk",
+      "structural": {
+        "wmi": "NM0",
+        "country": "Turkey",
+        "model_year_candidates": [
+          1984,
+          2014
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "FORD",
+        "Model": "Transit Connect",
+        "ModelYear": "2014",
+        "Manufacturer": "FORD OTOMOTIV SANAYI A.S., TURKEY",
+        "PlantCountry": "SPAIN",
+        "ErrorCode": "1,4,14"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "NMTKZ3BXXMR123456",
+      "expect": {
+        "country_code": "TR",
+        "model_year": 2021,
+        "make": "Toyota",
+        "model": "C-HR"
+      },
+      "verified": "vpic",
+      "notes": "Toyota Motor Manufacturing Turkey, Sakarya",
+      "structural": {
+        "wmi": "NMT",
+        "country": "Turkey",
+        "model_year_candidates": [
+          1991,
+          2021
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "TOYOTA",
+        "Model": null,
+        "ModelYear": "2021",
+        "Manufacturer": "TOYOTA MOTOR MANUFACTURING,TURKEY ,INC.",
+        "PlantCountry": "TURKEY",
+        "ErrorCode": "1,5,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "NLNMDBFC5N1123456",
+      "expect": {
+        "country_code": "TR",
+        "model_year": 2022,
+        "make": "Karsan",
+        "model": null
+      },
+      "verified": "vpic",
+      "notes": "Karsan, Bursa",
+      "structural": {
+        "wmi": "NLN",
+        "country": "Turkey",
+        "model_year_candidates": [
+          1992,
+          2022
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "KARSAN",
+        "Model": null,
+        "ModelYear": "2022",
+        "Manufacturer": "KARSAN OTOMOTIV SANAYII VE TIC. A.S.",
+        "PlantCountry": "TURKEY",
+        "ErrorCode": "1,5,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "XTA21099062123456",
+      "expect": {
+        "country_code": "RU",
+        "model_year": 2006,
+        "make": "Lada",
+        "model": "2109"
+      },
+      "verified": "open",
+      "notes": "vininfo-Regeln fuer AvtoVAZ vorhanden",
+      "structural": {
+        "wmi": "XTA",
+        "country": "Russia",
+        "model_year_candidates": [
+          2006
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": null,
+        "Model": null,
+        "ModelYear": null,
+        "Manufacturer": null,
+        "PlantCountry": null,
+        "ErrorCode": "7"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "1HGCM82633A004352",
+      "expect": {
+        "country_code": "US",
+        "model_year": 2003,
+        "make": "Honda",
+        "model": "Accord"
+      },
+      "verified": "vpic",
+      "notes": "Referenz-VIN der NHTSA, Pruefziffer korrekt",
+      "structural": {
+        "wmi": "1HG",
+        "country": "United States",
+        "model_year_candidates": [
+          2003
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": true
+      },
+      "vpic_snapshot": {
+        "Make": "HONDA",
+        "Model": "Accord",
+        "ModelYear": "2003",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "PlantCountry": "UNITED STATES (USA)",
+        "ErrorCode": "0"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "JHMCM56557C404453",
+      "expect": {
+        "country_code": "JP",
+        "model_year": 2007,
+        "make": "Honda",
+        "model": "Accord"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "JHM",
+        "country": "Japan",
+        "model_year_candidates": [
+          2007
+        ],
+        "check_digit_valid": true,
+        "check_digit_required": false
+      },
+      "vpic_snapshot": {
+        "Make": "HONDA",
+        "Model": null,
+        "ModelYear": "2007",
+        "Manufacturer": "HONDA MOTOR CO., LTD.",
+        "PlantCountry": "JAPAN",
+        "ErrorCode": "0,14"
+      },
+      "vpic_knows_model": false
+    },
+    {
+      "vin": "1FTFW1ET5DFC10312",
+      "expect": {
+        "country_code": "US",
+        "model_year": 2013,
+        "make": "Ford",
+        "model": "F-150"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "1FT",
+        "country": "United States",
+        "model_year_candidates": [
+          1983,
+          2013
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": true
+      },
+      "vpic_snapshot": {
+        "Make": "FORD",
+        "Model": "F-150",
+        "ModelYear": "2013",
+        "Manufacturer": "FORD MOTOR COMPANY",
+        "PlantCountry": "UNITED STATES (USA)",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    },
+    {
+      "vin": "5YJ3E1EA7JF005339",
+      "expect": {
+        "country_code": "US",
+        "model_year": 2018,
+        "make": "Tesla",
+        "model": "Model 3"
+      },
+      "verified": "vpic",
+      "notes": "",
+      "structural": {
+        "wmi": "5YJ",
+        "country": "United States",
+        "model_year_candidates": [
+          1988,
+          2018
+        ],
+        "check_digit_valid": false,
+        "check_digit_required": true
+      },
+      "vpic_snapshot": {
+        "Make": "TESLA",
+        "Model": "Model 3",
+        "ModelYear": "2018",
+        "Manufacturer": "TESLA, INC.",
+        "PlantCountry": "UNITED STATES (USA)",
+        "ErrorCode": "1"
+      },
+      "vpic_knows_model": true
+    }
+  ]
+}

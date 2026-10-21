@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+
+# Env & secrets
+.env
+.env.local
+*.local
+
+# ETL Rohdaten (werden reproduzierbar neu geladen)
+etl/data/raw/
+etl/data/cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build-Artefakte
+*.egg-info/
+.pytest_cache/

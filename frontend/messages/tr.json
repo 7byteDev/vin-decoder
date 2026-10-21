@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "title": "VIN Çözümleyici",
+    "description": "Her alan için güven değeri ve kaynak bilgisiyle teknik VIN çözümlemesi. Odak: Avrupa ve Türkiye araçları."
+  },
+  "nav": {
+    "brands": "Markaya göre arama",
+    "home": "Ana sayfa",
+    "language": "Dil",
+    "menu": "Ana gezinme",
+    "results": "Sonuçlar",
+    "sources": "Kaynaklar",
+    "typeApproval": "Tip onayı",
+    "vehicle": "Araç",
+    "whatIsVin": "VIN nedir?"
+  },
+  "form": {
+    "label": "Araç Tanımlama Numarası (şasi no)",
+    "placeholder": "örn. WVWZZZ1JZ3W386752",
+    "submit": "Çözümle",
+    "loading": "Çözümleniyor…",
+    "hint": "17 karakter. I, O ve Q harfleri bir VIN içinde hiç kullanılmaz.",
+    "example": "Örnek dene",
+    "clear": "Temizle"
+  },
+  "result": {
+    "title": "Sonuç",
+    "confidence": "Genel güven",
+    "status": {
+      "ok": "Tam",
+      "partial": "Kısmi"
+    },
+    "field": "Alan",
+    "value": "Değer",
+    "sourcesColumn": "Kaynak",
+    "confidenceColumn": "Güven",
+    "noData": "Veri yok",
+    "conflict": "Kaynaklar çelişiyor",
+    "alternatives": "Ayrıca bildirilen",
+    "showDetails": "Ayrıntıları göster",
+    "hideDetails": "Ayrıntıları gizle",
+    "durationMs": "{ms} ms içinde çözüldü",
+    "empty": "Teknik dökümü görmek için bir VIN girin."
+  },
+  "structure": {
+    "title": "Yapı (ISO 3779)",
+    "explain": "İlk üç karakter üreticiyi belirtir, 4–9 arası karakterler aracı tanımlar, 10–17 arası ise tek tek aracı belirler. Yalnızca üreticiye özgü orta bölüm standart dışıdır — bir çözümleyicinin birden çok veri kaynağına ihtiyaç duymasının nedeni tam olarak budur.",
+    "wmi": "Üretici kodu (WMI)",
+    "vds": "Araç tanım bölümü (VDS)",
+    "vis": "Araç kimlik bölümü (VIS)",
+    "extendedWmi": "Genişletilmiş üretici kodu",
+    "smallManufacturer": "Küçük seri üretici (yılda 1000 araçtan az)",
+    "country": "Üretici kodunun ülkesi",
+    "region": "Bölge",
+    "checkDigit": "Kontrol hanesi",
+    "checkDigitValid": "doğru",
+    "checkDigitInvalid": "uyuşmuyor",
+    "checkDigitNotRequired": "bu bölgede zorunlu değil",
+    "modelYearCode": "Model yılı kodu",
+    "modelYearCandidates": "Olası yıllar",
+    "plantCode": "Fabrika kodu",
+    "serialMasked": "Seri numarası (işlenmez)"
+  },
+  "attributes": {
+    "body_class": "Kasa tipi",
+    "country": "Ülke",
+    "country_code": "Ülke kodu",
+    "doors": "Kapı sayısı",
+    "drive_type": "Çekiş tipi",
+    "engine_cylinders": "Silindir sayısı",
+    "engine_displacement_l": "Motor hacmi (l)",
+    "engine_model": "Motor kodu",
+    "engine_power_kw": "Güç (kW)",
+    "fuel_type": "Yakıt tipi",
+    "height": "Yükseklik",
+    "length": "Uzunluk",
+    "make": "Marka",
+    "manufacturer": "Üretici",
+    "max_weight": "Azami ağırlık",
+    "model": "Model",
+    "model_year": "Model yılı",
+    "plant_city": "Üretim şehri",
+    "plant_code": "Fabrika kodu",
+    "plant_company": "Üretim tesisi",
+    "plant_country": "Üretim ülkesi",
+    "region": "Bölge",
+    "seats": "Koltuk sayısı",
+    "series": "Seri",
+    "top_speed": "Azami hız",
+    "torque": "Tork",
+    "transmission": "Şanzıman",
+    "trim": "Donanım",
+    "vehicle_class": "AB sınıfı",
+    "vehicle_type": "Araç tipi",
+    "weight": "Boş ağırlık",
+    "wheelbase": "Dingil mesafesi",
+    "width": "Genişlik"
+  },
+  "warnings": {
+    "title": "Notlar",
+    "check_digit_mismatch": "Kontrol hanesi uyuşmuyor. Bu bölgede zorunlu olduğundan VIN'de yazım hatası olabilir.",
+    "check_digit_not_applicable": "Kontrol hanesi uyuşmuyor; Avrupa VIN'lerinde bu normaldir, 9. pozisyon orada çoğunlukla dolgu karakteridir.",
+    "model_year_ambiguous": "Model yılı kodu her 30 yılda bir tekrarlanır. Birden fazla yıl mümkündür.",
+    "model_year_code_invalid": "10. pozisyonda geçerli bir model yılı kodu yok.",
+    "model_year_out_of_range": "Model yılı kodu makul bir yıla karşılık gelmiyor.",
+    "model_year_position7_rule_inconclusive": "7. pozisyona ilişkin Kuzey Amerika kuralı yılı netleştirmedi.",
+    "country_range_unassigned": "Bu üretici kodunun ülke aralığı ISO 3780'de tanımlı değil.",
+    "manufacturer_unknown": "Bu koda ait üretici bulunamadı. Veritabanı bu kodu henüz kapsamıyor.",
+    "live_lookup_used": "Kendi veritabanındaki boşluklar nedeniyle ücretsiz bir dış API sorgulandı."
+  },
+  "errors": {
+    "title": "Çözümlenemedi",
+    "vin_empty": "Lütfen bir VIN girin.",
+    "vin_length": "Bir VIN tam olarak 17 karakterdir.",
+    "vin_invalid_characters": "VIN izin verilmeyen karakterler içeriyor: {characters}.",
+    "rate_limited": "Çok fazla istek. Lütfen biraz bekleyin.",
+    "network": "Servise şu anda ulaşılamıyor.",
+    "suggestion": "Şunu mu demek istediniz: {suggestion}?"
+  },
+  "sources": {
+    "title": "Kaynaklar",
+    "structural": "Yapısal çözümleme (ISO 3779/3780)",
+    "vindb": "Kendi veritabanı",
+    "nhtsa_vpic": "NHTSA vPIC (kamuya açık)",
+    "vininfo": "vininfo (BSD-3-Clause)",
+    "note": "Her değer kaynağını belirtir. Kaynaklar çeliştiğinde çelişki gizlenmez, gösterilir."
+  },
+  "privacy": {
+    "title": "Yalnızca teknik veri",
+    "body": "Bu araç yalnızca teknik araç verilerini işler — üretici, model, model yılı, teknik özellikler. Sahip, tescil veya başka hiçbir kişisel veri sorgulanmaz, saklanmaz ve gösterilmez. VIN'in seri numarası bölümü, herhangi bir kayıt alınmadan önce maskelenir."
+  },
+  "footer": {
+    "madeFor": "Avrupa ve Türkiye odaklı teknik VIN çözümleyici.",
+    "api": "API belgeleri"
+  },
+  "list": {
+    "title": "Eşleşen araçlar",
+    "count": "{count} eşleşen araç",
+    "none": "Bu VIN ile eşleşen bir tip onayı henüz yok.",
+    "noneHint": "Aşağıdaki yapısal çözümleme yine de geçerli. Kapsama, Avrupa'da tescilli araçlarda en güçlüdür.",
+    "model": "Model",
+    "year": "Yıl",
+    "power": "Güç",
+    "fuel": "Yakıt",
+    "transmission": "Şanzıman",
+    "select": "Seç",
+    "back": "Aramaya dön",
+    "quality": "Eşleşme kalitesi",
+    "matchedOn": "Eşleşme deseni",
+    "hint": "Bir VIN, bir serinin motor seçeneklerini ayırt etmez. Kendi aracınıza uyanı seçin."
+  },
+  "detail": {
+    "approvalDate": "Onay tarihi",
+    "approvalNumber": "İsviçre tip onayı",
+    "back": "Sonuçlara dön",
+    "basePattern": "Temel VIN deseni",
+    "close": "Kapat",
+    "consumption": "Tüketim ve CO₂",
+    "dimensions": "Ölçüler ve ağırlıklar",
+    "efficiency": "Verimlilik sınıfı",
+    "emissionCode": "Emisyon kodu",
+    "emissions": "Emisyonlar",
+    "engine": "Motor",
+    "enlarge": "Büyüt",
+    "euApproval": "AB tip onayı",
+    "exhaustCode": "Egzoz kodu",
+    "general": "Genel",
+    "imageNote": "Fotoğraflar seriyi gösterir, bu onayın tam donanımını değil. Wikimedia Commons üzerinden serbest lisanslı.",
+    "nedc": "NEDC",
+    "next": "Sonraki görsel",
+    "noExtras": "Bu onay için tüketim veya emisyon verisi kayıtlı değil.",
+    "notFound": "Bu araç kaydı mevcut değil.",
+    "pollutants": "Kirleticiler",
+    "previous": "Önceki görsel",
+    "productionYear": "Üretim yılı",
+    "range": "Elektrikli menzil",
+    "searchedVin": "Aranan VIN",
+    "source": "Kaynak",
+    "technical": "Teknik veriler",
+    "variant": "Versiyon",
+    "wheelbaseUncertain": "kesin değil – onay her iki versiyonu da kapsıyor",
+    "wltp": "WLTP"
+  },
+  "sections": {
+    "datenblatt": "Veri sayfası",
+    "hersteller_typ": "Üretici ve tip",
+    "fahrgestell": "Şasi",
+    "motor": "Motor",
+    "abmessungen": "Donanım ve ölçüler",
+    "gewichte": "Ağırlıklar ve garantiler",
+    "anhaengelast": "Römork yükleri",
+    "reifen": "Lastik ve jantlar",
+    "bemerkungen": "Notlar ve şartlar",
+    "sonstiges": "Diğer"
+  },
+  "values": {
+    "fuel": {
+      "petrol": "Benzin",
+      "petrol_direct_injection": "Benzin (direkt enjeksiyon)",
+      "diesel": "Dizel",
+      "electric": "Elektrik",
+      "hybrid": "Hibrit",
+      "gas": "Gaz",
+      "hydrogen": "Hidrojen"
+    },
+    "transmission": {
+      "manual": "Manuel",
+      "automatic": "Otomatik",
+      "continuous": "Kademesiz",
+      "electric": "Tek vitesli"
+    },
+    "drive": {
+      "front_wheel": "Önden çekiş",
+      "rear_wheel": "Arkadan itiş",
+      "all_wheel": "Dört çeker"
+    }
+  },
+  "units": {
+    "kw": "kW",
+    "ps": "HP",
+    "ccm": "cm³",
+    "mm": "mm",
+    "kg": "kg",
+    "kmh": "km/s",
+    "nm": "Nm",
+    "rpm": "dev/dak",
+    "gears": "{count} vites"
+  },
+  "home": {
+    "hero": {
+      "title": "Resmî tip onayı verileriyle ücretsiz VIN sorgulama",
+      "subtitle": "Şasi numarasını girin, arkasındaki teknik kaydı görün: motor, güç, şanzıman, ölçüler ve emisyonlar — her alan için kaynak ve güven değeriyle birlikte.",
+      "badgeOfficial": "Resmî kurum verileri",
+      "badgeUpdated": "Haftalık güncellenir",
+      "badgePrivacy": "Kişisel veri yok"
+    },
+    "recent": {
+      "title": "Son araç aramaları",
+      "empty": "Henüz arama yok.",
+      "note": "Yalnızca VIN'in teknik bölümü saklanır (1–11. pozisyonlar). Seri numarası, herhangi bir kayıt alınmadan önce maskelenir."
+    },
+    "vin": {
+      "title": "Araç Tanımlama Numarası (VIN) nedir?",
+      "body1": "VIN, üreticinin araca üretim sırasında verdiği benzersiz koddur. Tam 17 karakterdir. I, O ve Q harfleri hiç kullanılmaz — 1 ve 0 rakamlarıyla karıştırılmaları çok kolaydır.",
+      "body2": "VIN, ISO 3779 ve ISO 3780 ile standarttır — ancak yalnızca yapısı. Orta bölümdeki karakterlerin ne anlama geldiğini her üretici kendisi belirler. Çözümlemenin birden fazla veri kaynağına ihtiyaç duymasının nedeni tam olarak budur.",
+      "whereTitle": "Nerede bulunur",
+      "where": "Sürücü tarafında ön panelde, ön camdan okunacak şekilde; ruhsatta; ve şasiye basılmış olarak — tip onayı kaydı her model için tam yerini bile belirtir."
+    },
+    "anatomy": {
+      "title": "Bir VIN nasıl oluşur",
+      "positions": "{range}. pozisyonlar",
+      "wmi": "Üretici kodu (WMI)",
+      "wmiText": "Üretici ve üretim ülkesi.",
+      "vds": "Araç tanım bölümü (VDS)",
+      "vdsText": "Model, kasa ve motor — üreticiye özgü, standart dışı.",
+      "check": "Kontrol hanesi",
+      "checkText": "Kuzey Amerika ve Çin'de zorunlu, Avrupa'da çoğunlukla dolgu karakteri.",
+      "year": "Model yılı kodu",
+      "yearText": "Her 30 yılda bir tekrarlanır, bu yüzden tek başına asla kesin değildir.",
+      "plant": "Fabrika kodu",
+      "plantText": "Montaj fabrikası, üretici tarafından belirlenir.",
+      "serial": "Seri numarası",
+      "serialText": "Tek bir aracı belirler. Bu araç onu asla saklamaz."
+    },
+    "legacy": {
+      "title": "1981 öncesinde VIN standart değildi",
+      "body": "Her üretici kendi formatını kullanıyordu, uzunluk ve yapı büyük ölçüde değişiyordu. 17 karakterli format ancak 1981'den beri zorunlu. Daha eski araçlarda üreticinin bilinmesi gerekir — aşağıdaki yapısal kurallar orada geçerli değildir."
+    },
+    "yearTable": {
+      "title": "Model yılı kodları (10. pozisyon)",
+      "body": "Onuncu karakter, model yılını 30 yıllık bir döngüde kodlar. Bu tablo çözümleyicinin kendi kullandığı kaynaktan gelir; dolayısıyla gerçek sonuçtan sapması mümkün değildir.",
+      "code": "Kod",
+      "cycle1": "1. döngü",
+      "cycle2": "2. döngü"
+    },
+    "countryTable": {
+      "title": "Üretici kodunun ülke aralıkları",
+      "body": "İlk iki karakter, ISO 3780'e göre üretim ülkesini belirler. Burada çözümleyicimizin fiilen değerlendirdiği aralıklar yer alır.",
+      "range": "Aralık",
+      "country": "Ülke",
+      "region": "Bölge",
+      "showAll": "{count} aralığın tümünü göster",
+      "showLess": "Daha az göster"
+    },
+    "facts": {
+      "lengthTitle": "Kaç karakter?",
+      "length": "Tam 17 — rakamlar ve büyük harfler",
+      "lettersTitle": "Hangi harfler yok?",
+      "letters": "1 ve 0 ile karışmaması için I, O ve Q",
+      "sourceTitle": "Teknik veriler nereden geliyor?",
+      "source": "İsviçre tip onayları (ASTRA TARGA), açık kamu verisi olarak yayımlanır"
+    },
+    "eu": {
+      "title": "AB tip onayı nedir?",
+      "body": "Tip onayı, bir araç tipinin satışa sunulmadan önce Avrupa güvenlik, çevre ve teknik gerekliliklerini karşıladığını doğrulayan süreçtir. Kurum bir numuneyi test eder; üretici ardından üretilen her aracın onaylanan tipe uyduğunu beyan eder — böylece tek tek muayene gerekmez.",
+      "findTitle": "Onay numarası nerede yazar",
+      "find1": "Üretici etiketinde — genelde motor bölmesinde, kapı sütununda veya kaputun altında.",
+      "find2": "Çoğu AB ülkesinde ruhsatta.",
+      "find3": "Üreticinin verdiği Uygunluk Belgesi'nde (COC).",
+      "numberTitle": "Numarayı okumak",
+      "part1": "Onayı veren ülke (e1 = Almanya, e2 = Fransa)",
+      "part2": "Temel direktif veya yönetmelik (2007/46 = çerçeve direktifi)",
+      "part3": "Temel onayın sıra numarası",
+      "part4": "Genişletme numarası",
+      "whyTitle": "Neden önemli",
+      "why1": "AB tip onaylı bir araç, ek teknik muayene olmadan her üye ülkede tescil edilebilir.",
+      "why2": "Araç yola çıkmadan önce güvenlik ve emisyon standartlarının karşılandığını belgeler.",
+      "why3": "Bir şasi numarasından motor, şanzıman ve emisyon verilerine ulaşmayı mümkün kılan şey, esas olarak bu onay kaydıdır."
+    }
+  },
+  "browse": {
+    "approvals": "Tip onayı",
+    "empty": "Kayıt bulunamadı.",
+    "fuel": "Yakıt",
+    "generation": "Nesil",
+    "generations": "Nesil",
+    "intro": "Tip onayı veritabanındaki tüm markalar. Modelleri, kasa nesillerini ve tek tek araçları görmek için bir marka seçin.",
+    "models": "Model",
+    "open": "Görüntüle",
+    "power": "Güç",
+    "sameData": "teknik olarak aynı",
+    "sort": "Sıralama",
+    "sortCountAsc": "Araç sayısı (azdan çoğa)",
+    "sortCountDesc": "Araç sayısı (çoktan aza)",
+    "sortNameAsc": "Alfabetik (A-Z)",
+    "sortNameDesc": "Alfabetik (Z-A)",
+    "title": "Markaya göre araçlar",
+    "transmission": "Şanzıman",
+    "vehicle": "Araç",
+    "vehicles": "Araç",
+    "years": "Üretim"
+  }
+}

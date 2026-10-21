@@ -1,0 +1,78 @@
+name: vin-decoder
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-vindb}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?bitte in .env setzen}
+      POSTGRES_DB: ${POSTGRES_DB:-vindb}
+    volumes:
+      - vindb-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vindb} -d ${POSTGRES_DB:-vindb}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    # Kein Port nach aussen: die DB ist nur im Compose-Netz erreichbar.
+    expose:
+      - "5432"
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-vindb}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-vindb}
+      ENABLE_LIVE_NHTSA: ${ENABLE_LIVE_NHTSA:-true}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    ports:
+      # Standard ist localhost. Im LAN erreichbar machen: BIND_ADDRESS=0.0.0.0 in .env
+      - "${BIND_ADDRESS:-127.0.0.1}:8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  etl:
+    build:
+      context: .
+      dockerfile: etl/Dockerfile
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL_SYNC: postgresql://${POSTGRES_USER:-vindb}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-vindb}
+    volumes:
+      # Rohdaten-Cache ueberlebt Container-Neustarts -> Wiederholungslaeufe sind billig
+      - etl-cache:/app/etl/data/raw
+    # Standardlauf: Schema einspielen und alle freigegebenen Quellen importieren.
+    command: ["python", "-m", "etl.run_import", "all"]
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost:8000}
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      # Serverseitiges Rendering spricht die API im Compose-Netz an,
+      # der Browser dagegen ueber NEXT_PUBLIC_API_BASE_URL.
+      API_INTERNAL_URL: http://api:8000
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:3000:3000"
+
+volumes:
+  vindb-data:
+  etl-cache:

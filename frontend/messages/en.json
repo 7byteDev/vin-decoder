@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "title": "VIN Decoder",
+    "description": "Technical VIN decoding with confidence and source for every field. Focused on European and Turkish vehicles."
+  },
+  "nav": {
+    "brands": "Brands",
+    "home": "Home",
+    "language": "Language",
+    "menu": "Main navigation",
+    "results": "Results",
+    "sources": "Sources",
+    "typeApproval": "Type approval",
+    "vehicle": "Vehicle",
+    "whatIsVin": "What is a VIN?"
+  },
+  "form": {
+    "label": "Vehicle Identification Number",
+    "placeholder": "e.g. WVWZZZ1JZ3W386752",
+    "submit": "Decode",
+    "loading": "Decoding…",
+    "hint": "17 characters. The letters I, O and Q never appear in a VIN.",
+    "example": "Try an example",
+    "clear": "Clear"
+  },
+  "result": {
+    "title": "Result",
+    "confidence": "Overall confidence",
+    "status": {
+      "ok": "Complete",
+      "partial": "Partial"
+    },
+    "field": "Field",
+    "value": "Value",
+    "sourcesColumn": "Source",
+    "confidenceColumn": "Confidence",
+    "noData": "No data",
+    "conflict": "Sources disagree",
+    "alternatives": "Also reported",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "durationMs": "Resolved in {ms} ms",
+    "empty": "Enter a VIN to see the technical breakdown."
+  },
+  "structure": {
+    "title": "Structure (ISO 3779)",
+    "explain": "The first three characters identify the manufacturer, characters 4–9 describe the vehicle, and 10–17 identify the individual unit. Only the manufacturer-specific middle part varies between makers — that is why a decoder needs several data sources.",
+    "wmi": "Manufacturer identifier (WMI)",
+    "vds": "Descriptor section (VDS)",
+    "vis": "Identifier section (VIS)",
+    "extendedWmi": "Extended manufacturer identifier",
+    "smallManufacturer": "Small-series manufacturer (fewer than 1000 vehicles per year)",
+    "country": "Country of the manufacturer identifier",
+    "region": "Region",
+    "checkDigit": "Check digit",
+    "checkDigitValid": "valid",
+    "checkDigitInvalid": "does not match",
+    "checkDigitNotRequired": "not required in this region",
+    "modelYearCode": "Model year code",
+    "modelYearCandidates": "Possible years",
+    "plantCode": "Plant code",
+    "serialMasked": "Serial number (not processed)"
+  },
+  "attributes": {
+    "body_class": "Body style",
+    "country": "Country",
+    "country_code": "Country code",
+    "doors": "Doors",
+    "drive_type": "Drive type",
+    "engine_cylinders": "Cylinders",
+    "engine_displacement_l": "Displacement (l)",
+    "engine_model": "Engine code",
+    "engine_power_kw": "Power (kW)",
+    "fuel_type": "Fuel type",
+    "height": "Height",
+    "length": "Length",
+    "make": "Make",
+    "manufacturer": "Manufacturer",
+    "max_weight": "Gross weight",
+    "model": "Model",
+    "model_year": "Model year",
+    "plant_city": "Plant city",
+    "plant_code": "Plant code",
+    "plant_company": "Plant operator",
+    "plant_country": "Plant country",
+    "region": "Region",
+    "seats": "Seats",
+    "series": "Series",
+    "top_speed": "Top speed",
+    "torque": "Torque",
+    "transmission": "Transmission",
+    "trim": "Trim",
+    "vehicle_class": "EU class",
+    "vehicle_type": "Vehicle type",
+    "weight": "Kerb weight",
+    "wheelbase": "Wheelbase",
+    "width": "Width"
+  },
+  "warnings": {
+    "title": "Notes",
+    "check_digit_mismatch": "The check digit does not match. For this region it is mandatory, so the VIN may contain a typo.",
+    "check_digit_not_applicable": "The check digit does not match, which is normal for European VINs — position 9 is often a filler character there.",
+    "model_year_ambiguous": "The model year code repeats every 30 years. Several years are possible.",
+    "model_year_code_invalid": "Position 10 does not contain a valid model year code.",
+    "model_year_out_of_range": "The model year code does not resolve to a plausible year.",
+    "model_year_position7_rule_inconclusive": "The North American rule for position 7 did not resolve the year.",
+    "country_range_unassigned": "The country range of this manufacturer identifier is not assigned in ISO 3780.",
+    "manufacturer_unknown": "No manufacturer found for this identifier. The database does not cover it yet.",
+    "live_lookup_used": "A free external API was queried because the local database had gaps."
+  },
+  "errors": {
+    "title": "Cannot decode",
+    "vin_empty": "Please enter a VIN.",
+    "vin_length": "A VIN has exactly 17 characters.",
+    "vin_invalid_characters": "The VIN contains characters that are not allowed: {characters}.",
+    "rate_limited": "Too many requests. Please wait a moment.",
+    "network": "The service is not reachable right now.",
+    "suggestion": "Did you mean {suggestion}?"
+  },
+  "sources": {
+    "title": "Sources",
+    "structural": "Structural decoding (ISO 3779/3780)",
+    "vindb": "Own database",
+    "nhtsa_vpic": "NHTSA vPIC (public domain)",
+    "vininfo": "vininfo (BSD-3-Clause)",
+    "note": "Every value states where it comes from. Where sources disagree, the disagreement is shown instead of being hidden."
+  },
+  "privacy": {
+    "title": "Technical data only",
+    "body": "This tool processes technical vehicle data only — manufacturer, model, year, technology. No owner, registration or other personal data is queried, stored or displayed. The serial part of the VIN is masked before anything is logged."
+  },
+  "footer": {
+    "madeFor": "Technical VIN decoder with a European and Turkish focus.",
+    "api": "API documentation"
+  },
+  "list": {
+    "title": "Matching vehicles",
+    "count": "{count} matching vehicles",
+    "none": "No type approval matches this VIN yet.",
+    "noneHint": "The structural decoding below still applies. Coverage is strongest for vehicles registered in Europe.",
+    "model": "Model",
+    "year": "Year",
+    "power": "Power",
+    "fuel": "Fuel",
+    "transmission": "Transmission",
+    "select": "Select",
+    "back": "Back to search",
+    "quality": "Match quality",
+    "matchedOn": "Matched on",
+    "hint": "A VIN does not distinguish the engine variants of a model range. Pick the vehicle that matches yours."
+  },
+  "detail": {
+    "approvalDate": "Approved on",
+    "approvalNumber": "Swiss type approval",
+    "back": "Back to results",
+    "basePattern": "Base VIN pattern",
+    "close": "Close",
+    "consumption": "Consumption & CO₂",
+    "dimensions": "Dimensions & weights",
+    "efficiency": "Efficiency class",
+    "emissionCode": "Emission code",
+    "emissions": "Emissions",
+    "engine": "Engine",
+    "enlarge": "Enlarge",
+    "euApproval": "EU type approval",
+    "exhaustCode": "Exhaust code",
+    "general": "General",
+    "imageNote": "Photos show the model range, not the exact configuration of this approval. Freely licensed via Wikimedia Commons.",
+    "nedc": "NEDC",
+    "next": "Next image",
+    "noExtras": "No consumption or emission data recorded for this approval.",
+    "notFound": "This vehicle record does not exist.",
+    "pollutants": "Pollutants",
+    "previous": "Previous image",
+    "productionYear": "Production year",
+    "range": "Electric range",
+    "searchedVin": "Searched VIN",
+    "source": "Source",
+    "technical": "Technical data",
+    "variant": "Version",
+    "wheelbaseUncertain": "not conclusive – the approval covers both versions",
+    "wltp": "WLTP"
+  },
+  "sections": {
+    "datenblatt": "Data sheet",
+    "hersteller_typ": "Manufacturer & type",
+    "fahrgestell": "Chassis",
+    "motor": "Engine",
+    "abmessungen": "Equipment & dimensions",
+    "gewichte": "Weights & guarantees",
+    "anhaengelast": "Trailer loads",
+    "reifen": "Tyres & wheels",
+    "bemerkungen": "Remarks & conditions",
+    "sonstiges": "Other"
+  },
+  "values": {
+    "fuel": {
+      "petrol": "Petrol",
+      "petrol_direct_injection": "Petrol (direct injection)",
+      "diesel": "Diesel",
+      "electric": "Electric",
+      "hybrid": "Hybrid",
+      "gas": "Gas",
+      "hydrogen": "Hydrogen"
+    },
+    "transmission": {
+      "manual": "Manual",
+      "automatic": "Automatic",
+      "continuous": "Continuously variable",
+      "electric": "Single speed"
+    },
+    "drive": {
+      "front_wheel": "Front-wheel drive",
+      "rear_wheel": "Rear-wheel drive",
+      "all_wheel": "All-wheel drive"
+    }
+  },
+  "units": {
+    "kw": "kW",
+    "ps": "hp",
+    "ccm": "cc",
+    "mm": "mm",
+    "kg": "kg",
+    "kmh": "km/h",
+    "nm": "Nm",
+    "rpm": "rpm",
+    "gears": "{count} gears"
+  },
+  "home": {
+    "hero": {
+      "title": "Free VIN check with official type approval data",
+      "subtitle": "Enter a chassis number and get the technical record behind it: engine, power, transmission, dimensions and emissions — with the source and a confidence value for every field.",
+      "badgeOfficial": "Official government data",
+      "badgeUpdated": "Updated weekly",
+      "badgePrivacy": "No personal data"
+    },
+    "recent": {
+      "title": "Recent vehicle searches",
+      "empty": "No searches yet.",
+      "note": "Only the technical part of the VIN is stored (positions 1–11). The serial number is masked before anything is logged."
+    },
+    "vin": {
+      "title": "What is a Vehicle Identification Number (VIN)?",
+      "body1": "A VIN is the unique code a manufacturer assigns to a vehicle during production. It has exactly 17 characters. The letters I, O and Q never appear — they are too easy to confuse with the digits 1 and 0.",
+      "body2": "The code is standardised by ISO 3779 and ISO 3780, but only its structure is. What the individual characters mean in the middle section is defined by each manufacturer separately, which is why decoding needs more than one data source.",
+      "whereTitle": "Where to find it",
+      "where": "On the driver's side of the dashboard, visible through the windscreen; on the vehicle registration document; and stamped into the chassis — the type approval record even states the exact position for each model."
+    },
+    "anatomy": {
+      "title": "How a VIN is put together",
+      "positions": "Positions {range}",
+      "wmi": "World Manufacturer Identifier",
+      "wmiText": "Manufacturer and country of production.",
+      "vds": "Vehicle Descriptor Section",
+      "vdsText": "Model, body and engine — manufacturer-specific, not standardised.",
+      "check": "Check digit",
+      "checkText": "Mandatory in North America and China; in Europe usually a filler character.",
+      "year": "Model year code",
+      "yearText": "Repeats every 30 years, so it is never unambiguous on its own.",
+      "plant": "Plant code",
+      "plantText": "The assembly plant, defined by the manufacturer.",
+      "serial": "Serial number",
+      "serialText": "Identifies the individual vehicle. This tool never stores it."
+    },
+    "legacy": {
+      "title": "Before 1981 the VIN was not standardised",
+      "body": "Every manufacturer used its own format, so length and structure varied widely. The 17-character format has been mandatory since 1981. For older vehicles the manufacturer has to be known — the structural rules below do not apply to them."
+    },
+    "yearTable": {
+      "title": "Model year codes (position 10)",
+      "body": "The tenth character encodes the model year in a 30-year cycle. This table comes from the same source the decoder itself uses, so it cannot drift apart from the actual result.",
+      "code": "Code",
+      "cycle1": "1st cycle",
+      "cycle2": "2nd cycle"
+    },
+    "countryTable": {
+      "title": "Country ranges of the manufacturer identifier",
+      "body": "The first two characters determine the country of production under ISO 3780. Shown here are the ranges our decoder actually evaluates.",
+      "range": "Range",
+      "country": "Country",
+      "region": "Region",
+      "showAll": "Show all {count} ranges",
+      "showLess": "Show fewer"
+    },
+    "facts": {
+      "lengthTitle": "How many characters?",
+      "length": "Exactly 17 — digits and capital letters",
+      "lettersTitle": "Which letters are excluded?",
+      "letters": "I, O and Q, to avoid confusion with 1 and 0",
+      "sourceTitle": "Where do the technical data come from?",
+      "source": "Swiss type approvals (ASTRA TARGA), published as open government data"
+    },
+    "eu": {
+      "title": "What is an EU type approval?",
+      "body": "Type approval is the procedure that confirms a vehicle type meets European safety, environmental and technical requirements before it may be sold. The authority tests one sample; the manufacturer then confirms that every unit built matches that approved type, so individual vehicles do not have to be tested.",
+      "findTitle": "Where to find the approval number",
+      "find1": "On the manufacturer's plate — usually in the engine bay, on a door pillar or under the bonnet.",
+      "find2": "On the vehicle registration document, in most EU countries.",
+      "find3": "On the Certificate of Conformity (CoC) issued by the manufacturer.",
+      "numberTitle": "Reading the number",
+      "part1": "Country that granted the approval (e1 = Germany, e2 = France)",
+      "part2": "Base directive or regulation (2007/46 = framework directive)",
+      "part3": "Sequential number of the base approval",
+      "part4": "Extension number",
+      "whyTitle": "Why it matters",
+      "why1": "A vehicle with EU type approval can be registered in any member state without further technical inspection.",
+      "why2": "It guarantees that safety and emission standards were met before the vehicle reached the road.",
+      "why3": "The approval record is what makes it possible to look up engine, transmission and emission data from a chassis number at all."
+    }
+  },
+  "browse": {
+    "approvals": "Type approvals",
+    "empty": "Nothing found.",
+    "fuel": "Fuel",
+    "generation": "Generation",
+    "generations": "Generations",
+    "intro": "Every brand in the type-approval database. Pick a brand to see its models, generations and individual vehicles.",
+    "models": "Models",
+    "open": "View",
+    "power": "Power",
+    "sameData": "technically identical",
+    "sort": "Sort by",
+    "sortCountAsc": "By fleet size (ascending)",
+    "sortCountDesc": "By fleet size (descending)",
+    "sortNameAsc": "Alphabetical (A-Z)",
+    "sortNameDesc": "Alphabetical (Z-A)",
+    "title": "Vehicles by brand",
+    "transmission": "Transmission",
+    "vehicle": "Vehicle",
+    "vehicles": "Vehicles",
+    "years": "Built"
+  }
+}
